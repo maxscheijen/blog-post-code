@@ -1,0 +1,9 @@
+# jupyter notebook checkpoints
+.ipynb_checkpoints
+
+# Data files
+*.csv
+*.h5
+*.pkl
+*.pth
+*.json
