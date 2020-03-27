@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <title>Fasion Classifier</title>
+  </head>
+  <body>
+    <div class="center">
+      <div class="title">Fashion item Classifier</div>
+      <div class="description">
+        <p>👚👕👖👗👟👠</p>
+        <p>Don't know what fashion item you're looking at? </p>
+        <p>Upload an image and find out!</p>
+      </div>
+      <div class="content">
+        <form method="post" enctype=multipart/form-data>
+          <input type="file" name="image-file" id="file" class="input-file" />
+          <label for="file">Upload image</label>
+          <input type="submit" id="predict" value="predict" class="input-file"/>
+          <label for="predict">Predict</label>
+        </form>
+        <div class="result">
+        {% if label %}
+          <p>The is probably a </p>
+          <div class="prediction">
+              <p> {{ label }}</p>
+          </div>
+        {% endif %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
